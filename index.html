@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ann Elegance - Luxury Bridal Gowns</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fafaf8;
+            color: #2a2a2a;
+            line-height: 1.6;
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 60px;
+            background-color: white;
+            border-bottom: 1px solid #e8e8e8;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: #2a2a2a;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            font-weight: 700;
+            color: #c9a961;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 50px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #2a2a2a;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover {
+            color: #c9a961;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 25px;
+            font-size: 18px;
+            color: #2a2a2a;
+            cursor: pointer;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            align-items: center;
+            padding: 100px 60px;
+            background-color: white;
+            gap: 70px;
+            min-height: 700px;
+        }
+
+        .hero-content h1 {
+            font-size: 52px;
+            font-weight: 300;
+            line-height: 1.15;
+            letter-spacing: -0.8px;
+            margin-bottom: 35px;
+            color: #2a2a2a;
+        }
+
+        .hero-content h1 .highlight {
+            font-weight: 700;
+            color: #c9a961;
+        }
+
+        .hero-content p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.9;
+            letter-spacing: 0.3px;
+            margin-bottom: 45px;
+            max-width: 450px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 45px;
+            background-color: #2a2a2a;
+            color: white;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            border: 2px solid #2a2a2a;
+            font-weight: 600;
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: #2a2a2a;
+        }
+
+        .hero-image {
+            position: relative;
+            height: 650px;
+            overflow: hidden;
+            border-radius: 2px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.03);
+        }
+
+        /* ===== FEATURED SECTION ===== */
+        .featured {
+            background-color: white;
+            padding: 120px 60px;
+            text-align: center;
+        }
+
+        .section-label {
+            font-size: 12px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .featured h2 {
+            font-size: 46px;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 60px;
+            color: #2a2a2a;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 550px;
+            overflow: hidden;
+            margin-bottom: 50px;
+            border-radius: 2px;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+
+        .featured-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .featured-description {
+            font-size: 14px;
+            color: #888;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== GALLERY SECTION ===== */
+        .gallery-section {
+            background-color: #fafaf8;
+            padding: 120px 60px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-header h3 {
+            font-size: 12px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 18px;
+            font-weight: 500;
+        }
+
+        .section-header h2 {
+            font-size: 46px;
+            font-weight: 300;
+            line-height: 1.2;
+            color: #2a2a2a;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 45px;
+            margin-bottom: 60px;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-item-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.1) 50%, transparent);
+            padding: 40px 30px 30px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-item-overlay {
+            opacity: 1;
+        }
+
+        .gallery-item-overlay h4 {
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            background-color: white;
+            padding: 100px 60px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            height: 500px;
+            overflow: hidden;
+            border-radius: 2px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-content h3 {
+            font-size: 12px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .about-content h2 {
+            font-size: 42px;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            color: #2a2a2a;
+        }
+
+        .about-content p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.9;
+            letter-spacing: 0.3px;
+            margin-bottom: 25px;
+        }
+
+        .about-content .cta-button {
+            margin-top: 30px;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            background-color: white;
+            padding: 100px 60px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 46px;
+            font-weight: 300;
+            margin-bottom: 70px;
+            color: #2a2a2a;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            margin-bottom: 80px;
+        }
+
+        .contact-item h4 {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+
+        .contact-item p {
+            font-size: 15px;
+            color: #2a2a2a;
+            line-height: 1.9;
+        }
+
+        .contact-item a {
+            color: #c9a961;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #2a2a2a;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background-color: #fafaf8;
+            padding: 70px;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        .contact-form h3 {
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 40px;
+            color: #2a2a2a;
+            letter-spacing: -0.5px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #d5d5d5;
+            background-color: white;
+            font-family: inherit;
+            font-size: 14px;
+            color: #2a2a2a;
+            transition: all 0.3s ease;
+            border-radius: 1px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 140px;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #c9a961;
+            background-color: #fffcf8;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background-color: #2a2a2a;
+            color: white;
+            border: 2px solid #2a2a2a;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: white;
+            color: #2a2a2a;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #2a2a2a;
+            color: white;
+            padding: 60px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 12px;
+            letter-spacing: 0.8px;
+            margin-bottom: 25px;
+            color: #bbb;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #c9a961;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            nav {
+                padding: 20px 40px;
+            }
+
+            .nav-menu {
+                gap: 30px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 60px 40px;
+                gap: 40px;
+            }
+
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .hero-image {
+                height: 500px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 20px;
+            }
+
+            .nav-menu {
+                gap: 15px;
+                font-size: 10px;
+            }
+
+            .hero {
+                padding: 40px 20px;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+
+            .featured,
+            .gallery-section,
+            .about,
+            .contact {
+                padding: 60px 20px;
+            }
+
+            .featured h2,
+            .section-header h2,
+            .about-content h2,
+            .contact h2 {
+                font-size: 32px;
+            }
+
+            .contact-form {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav>
+        <div class="logo"><span>ANN</span> ELEGANCE</div>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <span>🔍</span>
+            <span>👤</span>
+            <span>🛍️</span>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Immerse Yourself in a World of <span class="highlight">Timeless Elegance</span></h1>
+            <p>Every bride deserves a gown that makes her feel extraordinary. Our collection celebrates the art of bridal couture, blending sophisticated design with impeccable craftsmanship. Discover gowns that tell your unique love story.</p>
+            <a href="#collection" class="cta-button">Explore Collection</a>
+        </div>
+        <div class="hero-image">
+            <img src="IMAGE_1_HERE" alt="Featured Bridal Gown">
+        </div>
+    </section>
+
+    <!-- ===== FEATURED COLLECTION ===== -->
+    <section class="featured">
+        <p class="section-label">New Season</p>
+        <h2>Ethereal, Flowing Designs That Feel Almost Dreamlike</h2>
+        <div class="featured-image">
+            <img src="IMAGE_2_HERE" alt="New Collection 2025">
+        </div>
+        <p class="featured-description">Experience our latest collection featuring luxurious fabrics, delicate embellishments, and couture-inspired silhouettes. Each gown is designed to enhance your natural beauty and make your wedding day unforgettable.</p>
+    </section>
+
+    <!-- ===== GALLERY SECTION ===== -->
+    <section class="gallery-section" id="collection">
+        <div class="section-header">
+            <h3>Our Collections</h3>
+            <h2>Curated Bridal Designs</h2>
+        </div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="IMAGE_3_HERE" alt="Grace Collection">
+                <div class="gallery-item-overlay">
+                    <h4>Grace Collection</h4>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="IMAGE_4_HERE" alt="Royal Elegance">
+                <div class="gallery-item-overlay">
+                    <h4>Royal Elegance</h4>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="IMAGE_5_HERE" alt="Ethereal Dreams">
+                <div class="gallery-item-overlay">
+                    <h4>Ethereal Dreams</h4>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="IMAGE_6_HERE" alt="Timeless Romance">
+                <div class="gallery-item-overlay">
+                    <h4>Timeless Romance</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about" id="about">
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="IMAGE_7_HERE" alt="About Ann Elegance">
+            </div>
+            <div class="about-content">
+                <h3>About Us</h3>
+                <h2>Crafted for Your Perfect Day</h2>
+                <p>Ann Elegance is a London-based bridal atelier dedicated to creating exquisite wedding gowns that celebrate individuality and timeless beauty. With over a decade of expertise in bridal design, we understand that your wedding gown is more than just a dress—it's a reflection of your dreams.</p>
+                <p>Each gown in our collection is meticulously handcrafted using the finest fabrics and techniques, ensuring that every bride who wears Ann Elegance feels confident, elegant, and absolutely stunning on her special day.</p>
+                <a href="#contact" class="cta-button">Schedule Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact" id="contact">
+        <h2>Get In Touch</h2>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <h4>London Studio</h4>
+                <p>Chelsea Design District<br>London, SW3 4PE<br>United Kingdom</p>
+            </div>
+            
+            <div class="contact-item">
+                <h4>Phone</h4>
+                <p><a href="tel:+442071114567">+44 (0) 207 111 4567</a><br>Monday - Saturday<br>10:00 AM - 6:00 PM</p>
+            </div>
+            
+            <div class="contact-item">
+                <h4>Email</h4>
+                <p><a href="mailto:hello@annelegance.com">hello@annelegance.com</a><br><a href="mailto:appointments@annelegance.com">appointments@annelegance.com</a></p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h3>Request a Consultation</h3>
+            <form>
+                <div class="form-group">
+                    <label>Your Name *</label>
+                    <input type="text" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Your Email *</label>
+                    <input type="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Wedding Date</label>
+                    <input type="date">
+                </div>
+                
+                <div class="form-group">
+                    <label>Tell us about your vision</label>
+                    <textarea placeholder="Describe your dream gown, style preferences, and any special requests..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Request Appointment</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>&copy; 2026 Ann Elegance. All Rights Reserved. | Luxury Bridal Gowns - London, UK</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+        </div>
+    </footer>
+
+</body>
+</html>
