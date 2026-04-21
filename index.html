@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ann Elegance - Luxury Bridal Gowns</title>
+    <title>Ann's Elegance - Luxury Bridal Gowns</title>
     <style>
         * {
             margin: 0;
@@ -29,7 +29,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
         .logo {
@@ -79,7 +79,7 @@
             grid-template-columns: 1fr 1.1fr;
             align-items: center;
             padding: 100px 60px;
-            background-color: white;
+            background: linear-gradient(135deg, #ffffff 0%, #fafaf8 100%);
             gap: 70px;
             min-height: 700px;
         }
@@ -119,11 +119,15 @@
             transition: all 0.4s ease;
             border: 2px solid #2a2a2a;
             font-weight: 600;
+            box-shadow: 0 4px 15px rgba(42, 42, 42, 0.2);
+            position: relative;
+            overflow: hidden;
         }
 
         .cta-button:hover {
             background-color: transparent;
             color: #2a2a2a;
+            box-shadow: 0 8px 25px rgba(42, 42, 42, 0.3);
         }
 
         .hero-image {
@@ -131,10 +135,12 @@
             height: 650px;
             overflow: hidden;
             border-radius: 2px;
-            background-color: #f5f5f5;
+            background: linear-gradient(135deg, #f9f7f4 0%, #ede9e5 100%);
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(201, 169, 97, 0.1);
         }
 
         .hero-image img {
@@ -150,7 +156,7 @@
 
         /* ===== FEATURED SECTION ===== */
         .featured {
-            background-color: white;
+            background: linear-gradient(135deg, #ffffff 0%, #f5f2f0 100%);
             padding: 120px 60px;
             text-align: center;
         }
@@ -162,6 +168,8 @@
             color: #999;
             margin-bottom: 20px;
             font-weight: 500;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            letter-spacing: 3px;
         }
 
         .featured h2 {
@@ -178,10 +186,12 @@
             overflow: hidden;
             margin-bottom: 50px;
             border-radius: 2px;
-            background-color: #f5f5f5;
+            background: linear-gradient(135deg, #f9f7f4 0%, #ede9e5 100%);
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+            border: 1px solid rgba(201, 169, 97, 0.1);
         }
 
         .featured-image img {
@@ -206,7 +216,7 @@
 
         /* ===== GALLERY SECTION ===== */
         .gallery-section {
-            background-color: #fafaf8;
+            background: linear-gradient(135deg, #fafaf8 0%, #f0ebe5 100%);
             padding: 120px 60px;
         }
 
@@ -244,10 +254,13 @@
             overflow: hidden;
             cursor: pointer;
             border-radius: 2px;
-            background-color: #f5f5f5;
+            background: linear-gradient(135deg, #f9f7f4 0%, #ede9e5 100%);
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(201, 169, 97, 0.08);
+            transition: all 0.4s ease;
         }
 
         .gallery-item img {
@@ -255,6 +268,11 @@
             height: 100%;
             object-fit: contain;
             transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .gallery-item:hover {
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
         }
 
         .gallery-item:hover img {
@@ -286,7 +304,7 @@
 
         /* ===== ABOUT SECTION ===== */
         .about {
-            background-color: white;
+            background: linear-gradient(135deg, #ffffff 0%, #fafaf8 100%);
             padding: 100px 60px;
         }
 
@@ -301,10 +319,12 @@
             height: 500px;
             overflow: hidden;
             border-radius: 2px;
-            background-color: #f5f5f5;
+            background: linear-gradient(135deg, #f9f7f4 0%, #ede9e5 100%);
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+            border: 1px solid rgba(201, 169, 97, 0.1);
         }
 
         .about-image img {
@@ -363,6 +383,18 @@
             margin-bottom: 80px;
         }
 
+        .contact-item {
+            padding: 30px;
+            border-radius: 8px;
+            transition: all 0.4s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(201, 169, 97, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transform: translateY(-3px);
+        }
+
         .contact-item h4 {
             font-size: 12px;
             letter-spacing: 2px;
@@ -390,11 +422,13 @@
 
         /* Contact Form */
         .contact-form {
-            background-color: #fafaf8;
+            background: linear-gradient(135deg, #ffffff 0%, #fafaf8 100%);
             padding: 70px;
             max-width: 600px;
             margin: 0 auto;
             border-radius: 2px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(201, 169, 97, 0.15);
         }
 
         .contact-form h3 {
@@ -424,13 +458,14 @@
         .form-group textarea {
             width: 100%;
             padding: 14px 16px;
-            border: 1px solid #d5d5d5;
-            background-color: white;
+            border: 1px solid #e0dcd8;
+            background-color: #ffffff;
             font-family: inherit;
             font-size: 14px;
             color: #2a2a2a;
             transition: all 0.3s ease;
             border-radius: 1px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
 
         .form-group textarea {
@@ -444,6 +479,7 @@
             outline: none;
             border-color: #c9a961;
             background-color: #fffcf8;
+            box-shadow: 0 5px 20px rgba(201, 169, 97, 0.2);
         }
 
         .submit-btn {
@@ -582,7 +618,7 @@
 
     <!-- ===== NAVIGATION ===== -->
     <nav>
-        <div class="logo"><span>ANN</span> ELEGANCE</div>
+        <div class="logo"><span>ANN'S</span> ELEGANCE</div>
         <ul class="nav-menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#collection">Collection</a></li>
@@ -604,7 +640,7 @@
             <a href="#collection" class="cta-button">Explore Collection</a>
         </div>
         <div class="hero-image">
-            <img src="Images/gown1.png" alt="Featured Bridal Gown">
+            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80" alt="Featured Bridal Gown">
         </div>
     </section>
 
@@ -613,7 +649,7 @@
         <p class="section-label">New Season</p>
         <h2>Ethereal, Flowing Designs That Feel Almost Dreamlike</h2>
         <div class="featured-image">
-            <img src="Images/gown2.png" alt="New Collection 2025">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" alt="New Collection 2025">
         </div>
         <p class="featured-description">Experience our latest collection featuring luxurious fabrics, delicate embellishments, and couture-inspired silhouettes. Each gown is designed to enhance your natural beauty and make your wedding day unforgettable.</p>
     </section>
@@ -627,28 +663,28 @@
         
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="Images/gown3.png" alt="Grace Collection">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80" alt="Grace Collection">
                 <div class="gallery-item-overlay">
                     <h4>Grace Collection</h4>
                 </div>
             </div>
             
             <div class="gallery-item">
-                <img src="Images/gown4.png" alt="Royal Elegance">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Royal Elegance">
                 <div class="gallery-item-overlay">
                     <h4>Royal Elegance</h4>
                 </div>
             </div>
             
             <div class="gallery-item">
-                <img src="Images/gown3.png" alt="Ethereal Dreams">
+                <img src="https://images.unsplash.com/photo-1552053831-71594a27c62d?w=800&q=80" alt="Ethereal Dreams">
                 <div class="gallery-item-overlay">
                     <h4>Ethereal Dreams</h4>
                 </div>
             </div>
             
             <div class="gallery-item">
-                <img src="Images/gown4.png" alt="Timeless Romance">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Timeless Romance">
                 <div class="gallery-item-overlay">
                     <h4>Timeless Romance</h4>
                 </div>
@@ -660,13 +696,13 @@
     <section class="about" id="about">
         <div class="about-grid">
             <div class="about-image">
-                <img src="Images/gown1.png" alt="About Ann Elegance">
+                <img src="https://images.unsplash.com/photo-1537633552988-34f63bed498c?w=800&q=80" alt="About Ann's Elegance">
             </div>
             <div class="about-content">
                 <h3>About Us</h3>
                 <h2>Crafted for Your Perfect Day</h2>
-                <p>Ann Elegance is a London-based bridal atelier dedicated to creating exquisite wedding gowns that celebrate individuality and timeless beauty. With over a decade of expertise in bridal design, we understand that your wedding gown is more than just a dress—it's a reflection of your dreams.</p>
-                <p>Each gown in our collection is meticulously handcrafted using the finest fabrics and techniques, ensuring that every bride who wears Ann Elegance feels confident, elegant, and absolutely stunning on her special day.</p>
+                <p>Ann's Elegance is a London-based bridal atelier dedicated to creating exquisite wedding gowns that celebrate individuality and timeless beauty. With over a decade of expertise in bridal design, we understand that your wedding gown is more than just a dress—it's a reflection of your dreams.</p>
+                <p>Each gown in our collection is meticulously handcrafted using the finest fabrics and techniques, ensuring that every bride who wears Ann's Elegance feels confident, elegant, and absolutely stunning on her special day.</p>
                 <a href="#contact" class="cta-button">Schedule Consultation</a>
             </div>
         </div>
@@ -689,7 +725,7 @@
             
             <div class="contact-item">
                 <h4>Email</h4>
-                <p><a href="mailto:hello@annelegance.com">hello@annelegance.com</a><br><a href="mailto:appointments@annelegance.com">appointments@annelegance.com</a></p>
+                <p><a href="mailto:hello@annselegance.com">hello@annselegance.com</a><br><a href="mailto:appointments@annselegance.com">appointments@annselegance.com</a></p>
             </div>
         </div>
 
@@ -723,7 +759,7 @@
 
     <!-- ===== FOOTER ===== -->
     <footer>
-        <p>&copy; 2026 Ann Elegance. All Rights Reserved. | Luxury Bridal Gowns - London, UK</p>
+        <p>&copy; 2026 Ann's Elegance. All Rights Reserved. | Luxury Bridal Gowns - London, UK</p>
         <div class="footer-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms & Conditions</a>
